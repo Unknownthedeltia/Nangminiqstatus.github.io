@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.light .container {
+    background: white;
+}
+
+body.dark .container {
+    background: #2a2a2a;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+body.light .section {
+    background: #f9f9f9;
+}
+
+body.dark .section {
+    background: #333;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+body.dark h2 {
+    color: #bbb;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+select, input, textarea {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    transition: border-color 0.3s;
+}
+
+body.dark select, body.dark input, body.dark textarea {
+    background: #444;
+    color: #e0e0e0;
+    border-color: #666;
+}
+
+select:focus, input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+canvas {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.base-stat {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.adjusted-stat {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+body.dark .base-stat {
+    color: #55efc4;
+}
+
+body.dark .adjusted-stat {
+    color: #ff7675;
+}
+
+/* スマホ対応 (999px以下) */
+@media (max-width: 999px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    button, select, input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    canvas {
+        height: 150px;
+    }
+}
+
+/* PC対応 (1000px以上) */
+@media (min-width: 1000px) {
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .section > * {
+        margin-right: 20px;
+    }
+}
